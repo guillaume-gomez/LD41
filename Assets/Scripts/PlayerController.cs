@@ -6,6 +6,8 @@ public class PlayerController : PhysicsObject {
 
   public float maxSpeed = 7;
   public float jumpTakeOffSpeed = 7;
+  public AudioClip jumpSound;
+
 
   private Animator animator;
   private SpriteRenderer spriteRenderer;
