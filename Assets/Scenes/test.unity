@@ -148,34 +148,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &218391534
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 218391535}
-  m_Layer: 9
-  m_Name: ShotSpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &218391535
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 218391534}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.28, y: 0.342, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 704605909}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &219282991
 Prefab:
   m_ObjectHideFlags: 0
@@ -218,7 +190,7 @@ Prefab:
     - target: {fileID: 20134372339604138, guid: 0f387d2a5577afa47b4f87e4e846f091,
         type: 2}
       propertyPath: orthographic size
-      value: 2.265625
+      value: 3.296875
       objectReference: {fileID: 0}
     - target: {fileID: 114123390247084860, guid: 0f387d2a5577afa47b4f87e4e846f091,
         type: 2}
@@ -430,11 +402,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4931535587410280, guid: e512f340412cfc24c8a87440fd41daa0,
     type: 2}
   m_PrefabInternal: {fileID: 1541627183}
---- !u!4 &704605909 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4536556617968068, guid: 13526ad550b5c1145b14859c792e13b2,
-    type: 2}
-  m_PrefabInternal: {fileID: 379231341}
 --- !u!1 &717457766
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,6 +490,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0ba3cf1221f8c2429eae43616860808, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 10
+  damage: 1
+  destroyTime: 1.5
 --- !u!61 &717457770
 BoxCollider2D:
   m_ObjectHideFlags: 0
