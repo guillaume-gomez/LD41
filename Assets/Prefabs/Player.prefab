@@ -140,7 +140,7 @@ MonoBehaviour:
   gravityModifier: 1
   maxSpeed: 3
   jumpTakeOffSpeed: 4
-  jumpSound: {fileID: 8300000, guid: e2beefeb2273f4efe992adf5b8d67c29, type: 3}
+  jumpSound: {fileID: 8300000, guid: bfc63574f94ab3746930fbbc7eb2347d, type: 3}
   bulletPrefab: {fileID: 1015885599814532, guid: d5cb143765753fc46a0f4a0d4f42047e,
     type: 2}
   shotSpawner: {fileID: 4002870071179954}
