@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
             float offset = 0.6f;
             Vector3 initPos = new Vector3(0, 2 + (i * offset), 0);
             EnemyRunner enemy = Instantiate(enemys[0], initPos, Quaternion.identity).GetComponent<EnemyRunner>();
-            enemy.velocityX = Random.Range(0f, 1f);
+            enemy.velocityX = Random.Range(0f, 0.5f);
             //enemy.hasWeapon = true;
         }
     }
