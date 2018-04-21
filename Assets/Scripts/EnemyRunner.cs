@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class EnemyRunner : PhysicsObject {
   public float maxSpeed = 7;
-  public float jumpTakeOffSpeed = 7;
+  public float jumpTakeOffSpeed = 30;
   public float velocityX = 0.3f;
   public AudioClip jumpSound;
+  public bool jump = false;
 
-  private bool jump = false;
   private Animator animator;
   private SpriteRenderer spriteRenderer;
 
@@ -32,6 +32,7 @@ public class EnemyRunner : PhysicsObject {
     } else if (jump) {
       if(velocity.y > 0) {
         velocity.y = velocity.y * 0.5f;
+        jump = false;
       }
     }
 
@@ -42,5 +43,9 @@ public class EnemyRunner : PhysicsObject {
 
   void Stop() {
     velocityX = 0.0f;
+  }
+
+  void Jump() {
+    jump = true;
   }
 }
