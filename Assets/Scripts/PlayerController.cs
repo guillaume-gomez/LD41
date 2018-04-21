@@ -7,6 +7,7 @@ public class PlayerController : PhysicsObject {
   public float maxSpeed = 7;
   public float jumpTakeOffSpeed = 7;
   public AudioClip jumpSound;
+  public AudioClip[] shootSounds;
 
   public GameObject bulletPrefab;
   public Transform shotSpawner;
@@ -49,6 +50,7 @@ public class PlayerController : PhysicsObject {
     base.Update();
     if( Input.GetButtonDown("Fire1") && Time.time > nextFire) {
       nextFire = Time.time + fireRate;
+      SoundManager.instance.RandomizeSfx(shootSounds);
       // to do set animation
       // create a bullet
       Instantiate(bulletPrefab, shotSpawner.position, shotSpawner.rotation);
