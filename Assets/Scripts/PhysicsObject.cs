@@ -32,7 +32,7 @@ public class PhysicsObject : MonoBehaviour {
   }
 
   // Update is called once per frame
-  void Update() {
+  public virtual void Update() {
     targetVelocity = Vector2.zero;
     ComputeVelocity();
   }
