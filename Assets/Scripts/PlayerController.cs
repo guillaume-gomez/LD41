@@ -8,9 +8,14 @@ public class PlayerController : PhysicsObject {
   public float jumpTakeOffSpeed = 7;
   public AudioClip jumpSound;
 
+  public GameObject bulletPrefab;
+  public Transform shotSpawner;
 
   private Animator animator;
   private SpriteRenderer spriteRenderer;
+
+  private float fireRate = 0.5f;
+  private float nextFire;
 
   void Awake () {
     spriteRenderer = GetComponent<SpriteRenderer>();
@@ -38,5 +43,15 @@ public class PlayerController : PhysicsObject {
     animator.SetBool("grounded", grounded);
     animator.SetFloat ("velocityX", Mathf.Abs (velocity.x) / maxSpeed);
     targetVelocity = move * maxSpeed;
+  }
+
+  public override void Update() {
+    base.Update();
+    if( Input.GetButtonDown("Fire1") && Time.time > nextFire) {
+      nextFire = Time.time + fireRate;
+      // to do set animation
+      // create a bullet
+      Instantiate(bulletPrefab, shotSpawner.position, shotSpawner.rotation);
+    }
   }
 }
