@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour
 
     private void HideLevelImage()
     {
-        //counterImage.SetActive(false);
+        counterImage.SetActive(false);
         doingSetup = false;
         //init pos
         StartRun();
