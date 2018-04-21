@@ -19,6 +19,7 @@ public class Bullet : MonoBehaviour {
   }
 
   private void OnTriggerEnter2D(Collider2D other) {
+    other.gameObject.SendMessage("Stop");
     Destroy(gameObject);
   }
 }
