@@ -6,7 +6,9 @@ public class EnemyRunner : PhysicsObject {
   public float maxSpeed = 7;
   public float jumpTakeOffSpeed = 7;
   public float velocityX = 0.3f;
+  public AudioClip jumpSound;
 
+  private bool jump = false;
   private Animator animator;
   private SpriteRenderer spriteRenderer;
 
@@ -24,15 +26,21 @@ public class EnemyRunner : PhysicsObject {
       spriteRenderer.flipX = !spriteRenderer.flipX;
     }
 
+    if(jump && grounded) {
+      SoundManager.instance.PlaySingle(jumpSound);
+      velocity.y = jumpTakeOffSpeed;
+    } else if (jump) {
+      if(velocity.y > 0) {
+        velocity.y = velocity.y * 0.5f;
+      }
+    }
+
     animator.SetBool("grounded", grounded);
     animator.SetFloat ("velocityX", Mathf.Abs (velocity.x) / maxSpeed);
     targetVelocity = move * maxSpeed;
   }
 
-  void OnCollisionEnter2D(Collision2D other) {
-    Debug.Log(other.gameObject.tag);
-    if(other.gameObject.tag == "BulletPlayer") {
-      velocityX = 0.0f;
-    }
+  void Stop() {
+    velocityX = 0.0f;
   }
 }
