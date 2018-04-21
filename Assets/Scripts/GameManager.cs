@@ -10,12 +10,13 @@ public class GameManager : MonoBehaviour
     private int level = 1;
     private int nbEnemys = 5;
     private Timer myTimer;
-    public GameObject[] enemys;
+    public GameObject[] enemyPrefabs;
     public GameObject player;
 
     private bool doingSetup;
     private GameObject counterImage;
     public float levelStartDelay = 3f;
+    private List<EnemyRunner> enemys = new List <EnemyRunner> ();
 
     void Awake()
     {
@@ -46,9 +47,9 @@ public class GameManager : MonoBehaviour
         for(int i = 0; i < nbEnemys; ++i) {
             float offset = 0.6f;
             Vector3 initPos = new Vector3(0, 2 + (i * offset), 0);
-            EnemyRunner enemy = Instantiate(enemys[0], initPos, Quaternion.identity).GetComponent<EnemyRunner>();
+            EnemyRunner enemy = Instantiate(enemyPrefabs[0], initPos, Quaternion.identity).GetComponent<EnemyRunner>();
             enemy.velocityX = Random.Range(0f, 0.5f);
-            //enemy.hasWeapon = true;
+            enemys.Add(enemy);
         }
     }
 
@@ -60,6 +61,7 @@ public class GameManager : MonoBehaviour
 
     void InitGame()
     {
+        enemys.Clear();
         doingSetup = true;
         player = GameObject.Find("PlayerWithCamera");
         counterImage = GameObject.Find("CounterImage");
@@ -94,4 +96,22 @@ public class GameManager : MonoBehaviour
         myTimer.StopTimer();
         Debug.Log("You Won");
     }
+
+    public int GetHeroPosition() {
+        int position = 1;
+        for(int i = 0; i < enemys.Count; i++) {
+            if(player.transform.position.x < enemys[i].transform.position.x ) {
+                position++;
+            }
+        }
+        return position;
+    }
+
+    public int NbEnemys { get
+        {
+            if(instance == null) {
+                instance = this;
+            }
+            return instance.nbEnemys + 1;
+        } }
 }
