@@ -58,7 +58,6 @@ public class EnemyRunner : PhysicsObject {
 
   public float VelocityX {
     set {
-      Debug.Log("velocityX " + value);
       velocityX = value;
       currentVelocityX = value;
     }
