@@ -53,4 +53,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemys:
   - {fileID: 1034858542945764, guid: 9c9cc31ed97300b40980215f0d232074, type: 2}
-  player: {fileID: 1351236674294846, guid: a4789103b97b1f548be1125fe8be66b9, type: 2}
+  player: {fileID: 1393669372037428, guid: 13526ad550b5c1145b14859c792e13b2, type: 2}
+  levelStartDelay: 3

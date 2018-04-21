@@ -54,16 +54,20 @@ public class GameManager : MonoBehaviour
     }
 
     private void InitPlayer() {
-        Instantiate(player, new Vector3(0, 1, 0), Quaternion.identity);
+        player.SetActive(true);
+        //Debug.Log("InitPlayer");
+        //Instantiate(player, new Vector3(0, 1, 0), Quaternion.identity);
     }
 
     void InitGame()
     {
         doingSetup = true;
+        player = GameObject.Find("PlayerWithCamera");
         counterImage = GameObject.Find("CounterImage");
         counterText = GameObject.Find("CounterText").GetComponent<Text>();
         counterText.text = "jsofskdldkfgodsigodsgi " + level;
         counterImage.SetActive(true);
+        player.SetActive(false);
 
         Invoke("HideLevelImage", levelStartDelay);
     }
