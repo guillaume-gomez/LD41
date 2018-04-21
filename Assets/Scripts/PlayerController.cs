@@ -25,6 +25,7 @@ public class PlayerController : PhysicsObject {
       velocity.y = jumpTakeOffSpeed;
     } else if (Input.GetButtonUp("Jump")) {
       if(velocity.y > 0) {
+        SoundManager.instance.PlaySingle(jumpSound);
         velocity.y = velocity.y * 0.5f;
       }
     }
