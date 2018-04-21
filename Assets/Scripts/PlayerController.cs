@@ -27,10 +27,10 @@ public class PlayerController : PhysicsObject {
     move.x = Input.GetAxis("Horizontal");
 
     if(Input.GetButtonDown("Jump") && grounded) {
+      SoundManager.instance.PlaySingle(jumpSound);
       velocity.y = jumpTakeOffSpeed;
     } else if (Input.GetButtonUp("Jump")) {
       if(velocity.y > 0) {
-        SoundManager.instance.PlaySingle(jumpSound);
         velocity.y = velocity.y * 0.5f;
       }
     }
