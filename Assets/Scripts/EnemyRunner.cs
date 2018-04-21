@@ -6,11 +6,13 @@ public class EnemyRunner : PhysicsObject {
   public float maxSpeed = 7;
   public float jumpTakeOffSpeed = 30;
   public float velocityX = 0.3f;
+  public float damageDuration = 0.8f;
   public AudioClip jumpSound;
   public bool jump = false;
 
   private Animator animator;
   private SpriteRenderer spriteRenderer;
+  private float currentVelocityX = 0.3f;
 
   void Awake () {
     spriteRenderer = GetComponent<SpriteRenderer>();
@@ -19,7 +21,7 @@ public class EnemyRunner : PhysicsObject {
 
   protected override void ComputeVelocity() {
     Vector2 move = Vector2.zero;
-    move.x = velocityX;
+    move.x = currentVelocityX;
 
     bool flipSprite = spriteRenderer.flipX ? (move.x > 0.01f) : (move.x < 0.01f);
     if (flipSprite) {
@@ -42,10 +44,23 @@ public class EnemyRunner : PhysicsObject {
   }
 
   void Stop() {
-    velocityX = 0.0f;
+    currentVelocityX = 0.0f;
+    Invoke("Cured", damageDuration);
+  }
+
+  void Cured() {
+    currentVelocityX = velocityX;
   }
 
   void Jump() {
     jump = true;
+  }
+
+  public float VelocityX {
+    set {
+      Debug.Log("velocityX " + value);
+      velocityX = value;
+      currentVelocityX = value;
+    }
   }
 }

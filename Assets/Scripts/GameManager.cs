@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
+        // uncomment in standalone
         InitGame();
     }
 
@@ -48,7 +49,7 @@ public class GameManager : MonoBehaviour
             float offset = 0.6f;
             Vector3 initPos = new Vector3(0, 2 + (i * offset), 0);
             EnemyRunner enemy = Instantiate(enemyPrefabs[0], initPos, Quaternion.identity).GetComponent<EnemyRunner>();
-            enemy.velocityX = Random.Range(0f, 0.5f);
+            enemy.VelocityX = Random.Range(0f, 0.5f);
             enemys.Add(enemy);
         }
     }
@@ -66,7 +67,7 @@ public class GameManager : MonoBehaviour
         player = GameObject.Find("PlayerWithCamera");
         counterImage = GameObject.Find("CounterImage");
         counterImage.SetActive(true);
-        //player.SetActive(false);
+        player.SetActive(false);
 
         Invoke("HideLevelImage", levelStartDelay);
     }
