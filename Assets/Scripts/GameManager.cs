@@ -60,4 +60,8 @@ public class GameManager : MonoBehaviour
     void Update()
     {
     }
+
+    public void Win() {
+        Debug.Log("You Won");
+    }
 }
