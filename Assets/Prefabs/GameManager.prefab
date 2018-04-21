@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa1aef19954eac046a28252392dd93b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemys:
+  enemyPrefabs:
   - {fileID: 1034858542945764, guid: 9c9cc31ed97300b40980215f0d232074, type: 2}
   player: {fileID: 1393669372037428, guid: 13526ad550b5c1145b14859c792e13b2, type: 2}
   levelStartDelay: 3
