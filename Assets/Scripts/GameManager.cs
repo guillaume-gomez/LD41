@@ -9,8 +9,14 @@ public class GameManager : MonoBehaviour
     public static GameManager instance = null;
     private int level = 1;
     private int nbEnemys = 5;
+    private Timer myTimer;
     public GameObject[] enemys;
     public GameObject player;
+
+    private bool doingSetup;
+    private GameObject counterImage;
+    private Text counterText;
+    public float levelStartDelay = 3f;
 
     void Awake()
     {
@@ -53,6 +59,28 @@ public class GameManager : MonoBehaviour
 
     void InitGame()
     {
+        doingSetup = true;
+        counterImage = GameObject.Find("CounterImage");
+        counterText = GameObject.Find("CounterText").GetComponent<Text>();
+        counterText.text = "jsofskdldkfgodsigodsgi " + level;
+        counterImage.SetActive(true);
+
+        Invoke("HideLevelImage", levelStartDelay);
+    }
+
+    private void HideLevelImage()
+    {
+        counterImage.SetActive(false);
+        doingSetup = false;
+        //init pos
+        StartRun();
+    }
+
+
+    private void StartRun() {
+        myTimer = GameObject.Find("MyTimer").GetComponent<Timer>();
+        myTimer.StartTimer();
+
         InitEnemys();
         InitPlayer();
     }
@@ -62,6 +90,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void Win() {
+        myTimer.StopTimer();
         Debug.Log("You Won");
     }
 }
