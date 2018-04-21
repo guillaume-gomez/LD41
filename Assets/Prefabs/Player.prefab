@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1393669372037428}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.14, y: 3.39, z: 1}
+  m_LocalPosition: {x: 2.3, y: 1.54, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -104,13 +104,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1393669372037428}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfea5b99531ffa64c8c08f08de3fa06a, type: 3}
+  m_Script: {fileID: 11500000, guid: 30182aa7f27ec354591478451f860a75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   minNormalGroundY: 0.65
   gravityModifier: 1
-  maxSpeed: 2.5
-  jumpTakeOffSpeed: 7
+  maxSpeed: 3
+  jumpTakeOffSpeed: 4
+  jumpSound: {fileID: 8300000, guid: e2beefeb2273f4efe992adf5b8d67c29, type: 3}
 --- !u!212 &212140962949679826
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -143,7 +144,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -888973317
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0540eeb6c369e1e499fc90e6880e6bce, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
