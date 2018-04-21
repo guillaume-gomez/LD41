@@ -15,7 +15,6 @@ public class GameManager : MonoBehaviour
 
     private bool doingSetup;
     private GameObject counterImage;
-    private Text counterText;
     public float levelStartDelay = 3f;
 
     void Awake()
@@ -64,10 +63,8 @@ public class GameManager : MonoBehaviour
         doingSetup = true;
         player = GameObject.Find("PlayerWithCamera");
         counterImage = GameObject.Find("CounterImage");
-        counterText = GameObject.Find("CounterText").GetComponent<Text>();
-        counterText.text = "jsofskdldkfgodsigodsgi " + level;
         counterImage.SetActive(true);
-        player.SetActive(false);
+        //player.SetActive(false);
 
         Invoke("HideLevelImage", levelStartDelay);
     }
