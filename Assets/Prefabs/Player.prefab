@@ -139,7 +139,7 @@ MonoBehaviour:
   minGroundNormalY: 0.65
   gravityModifier: 1
   maxSpeed: 6
-  jumpTakeOffSpeed: 7
+  jumpTakeOffSpeed: 6
   damageDuration: 0.8
   jumpSound: {fileID: 8300000, guid: bfc63574f94ab3746930fbbc7eb2347d, type: 3}
   ouchSounds:
