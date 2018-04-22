@@ -292,6 +292,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1668567538453530, guid: 1868c9c3f5582a94e89ffc9471141434, type: 2}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1868c9c3f5582a94e89ffc9471141434, type: 2}
   m_IsPrefabParent: 0
@@ -589,7 +593,7 @@ Prefab:
     - target: {fileID: 20871979283124526, guid: 68030a4a9c5bef64da348585f5f63394,
         type: 2}
       propertyPath: orthographic size
-      value: 1.5703125
+      value: 3.296875
       objectReference: {fileID: 0}
     - target: {fileID: 20871979283124526, guid: 68030a4a9c5bef64da348585f5f63394,
         type: 2}
