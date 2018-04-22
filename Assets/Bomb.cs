@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Bomb : MonoBehaviour {
 
+  public AudioClip[] explosionSounds;
+  public AudioClip diveExplosionSounds;
   //a holder for our Animator
   //Animator anim;
   //a public float for the explosion radius public
@@ -11,7 +13,8 @@ public class Bomb : MonoBehaviour {
 
   // Use this for initialization
   void Start () {
-    Destroy(this.gameObject, 5f);
+    Invoke("Explode", 5f);
+    SoundManager.instance.PlaySingle(diveExplosionSounds);
     // anim = GetComponent <Animator>();
   }
 
@@ -26,10 +29,15 @@ public class Bomb : MonoBehaviour {
           GameObject gameobjCharacterBase = col.GetComponent<Collider2D>().gameObject;
           CharacterBase characterBase = gameobjCharacterBase.GetComponent<CharacterBase>();
           characterBase.Stop();
-          Destroy(this.gameObject);
+          Explode();
         }
       }
     //}
+  }
+
+  private void Explode() {
+    SoundManager.instance.RandomizeSfx(explosionSounds);
+    Destroy(this.gameObject);
   }
 
 }

@@ -89,6 +89,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1581151d182edf4499c38a56cfe2a34d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionSounds:
+  - {fileID: 8300000, guid: 9335f943731c53741a39868cf28eb126, type: 3}
+  - {fileID: 8300000, guid: e9f855bc12a60ef459d4a312291a58f2, type: 3}
+  - {fileID: 8300000, guid: 291c3e07fdfaf8b45bff86e11ac51d30, type: 3}
+  diveExplosionSounds: {fileID: 8300000, guid: 89a22315e573845479d27c671a2ef7a4, type: 3}
 --- !u!212 &212246849459898110
 SpriteRenderer:
   m_ObjectHideFlags: 1
