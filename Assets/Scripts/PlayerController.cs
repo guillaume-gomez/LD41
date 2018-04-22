@@ -51,6 +51,6 @@ public class PlayerController : CharacterBase {
   }
 
   public override void Cured() {
-    Debug.Log("Cured man !");
+//    Debug.Log("Cured man !");
   }
 }
