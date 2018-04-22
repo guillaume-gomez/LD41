@@ -8,6 +8,7 @@ public class EnemyRunner : PhysicsObject {
   public float velocityX = 0.3f;
   public float damageDuration = 0.8f;
   public AudioClip jumpSound;
+  public AudioClip[] ouchSounds;
   public bool jump = false;
 
   private Animator animator;
@@ -45,6 +46,7 @@ public class EnemyRunner : PhysicsObject {
 
   void Stop() {
     currentVelocityX = 0.0f;
+    SoundManager.instance.RandomizeSfx(ouchSounds);
     Invoke("Cured", damageDuration);
   }
 
