@@ -49,18 +49,12 @@ public class ScrollingBackground : MonoBehaviour {
       }
     }
 
-    /*if(Input.GetKeyDown(KeyCode.F)) {
-      ScrollLeft();
-    }
-
-    if(Input.GetKeyDown(KeyCode.G)) {
-      ScrollRight();
-    }*/
   }
 
   private void ScrollLeft() {
     int lastRight = rightIndex;
-    layers[rightIndex].position = Vector3.right * (layers[leftIndex].position.x - backgroundSize);
+    float newX = (layers[leftIndex].position.x - backgroundSize);
+    layers[rightIndex].position = new Vector3(newX, layers[rightIndex].position.y, 0);
     leftIndex = rightIndex;
     rightIndex--;
     if(rightIndex < 0) {
@@ -70,7 +64,8 @@ public class ScrollingBackground : MonoBehaviour {
 
   private void ScrollRight() {
     int lastLeft = leftIndex;
-    layers[leftIndex].position = Vector3.right * (layers[rightIndex].position.x + backgroundSize);
+    float newX = (layers[rightIndex].position.x + backgroundSize);
+    layers[leftIndex].position = new Vector3(newX, layers[leftIndex].position.y, 0);
     rightIndex = leftIndex;
     leftIndex++;
     if(leftIndex == layers.Length) {
