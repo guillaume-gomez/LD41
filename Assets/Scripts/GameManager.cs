@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
             float offset = 0.6f;
             Vector3 initPos = new Vector3(0, 2 + (i * offset), 0);
             EnemyRunner enemy = Instantiate(enemyPrefabs[0], initPos, Quaternion.identity).GetComponent<EnemyRunner>();
-            enemy.VelocityX = Random.Range(0f, 0.5f);
+            enemy.VelocityX = Random.Range(0f, 1f);
             enemys.Add(enemy);
         }
     }
