@@ -43,3 +43,27 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 1529596895
+    locked: 0
+  - name: Layer5
+    uniqueID: 3679371173
+    locked: 0
+  - name: Layer4
+    uniqueID: 1530357943
+    locked: 0
+  - name: Layer3
+    uniqueID: 3725762217
+    locked: 0
+  - name: Layer2
+    uniqueID: 2053369151
+    locked: 0
+  - name: Characters
+    uniqueID: 2919090541
+    locked: 0
+  - name: Items
+    uniqueID: 3652506111
+    locked: 0
+  - name: Layer1
+    uniqueID: 1759060493
+    locked: 0
