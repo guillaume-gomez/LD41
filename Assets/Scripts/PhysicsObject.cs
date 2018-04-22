@@ -75,7 +75,6 @@ public class PhysicsObject : MonoBehaviour {
                 //hitBufferList.Add (hitBuffer [i]);
                 PlatformEffector2D platform = hitBuffer[i].collider.GetComponent<PlatformEffector2D>();
                 if (!platform ||(hitBuffer[i].normal == Vector2.up && velocity.y < 0 && yMovement)) { //only when going down
-                     Debug.Log(platform);
                      hitBufferList.Add(hitBuffer[i]); // get the colliding objects
                 }
             }
