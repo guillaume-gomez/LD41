@@ -140,7 +140,14 @@ MonoBehaviour:
   gravityModifier: 1
   maxSpeed: 3
   jumpTakeOffSpeed: 7
+  damageDuration: 0.8
   jumpSound: {fileID: 8300000, guid: bfc63574f94ab3746930fbbc7eb2347d, type: 3}
+  ouchSounds:
+  - {fileID: 8300000, guid: e617c09c662ca1d42917f837f0530ad8, type: 3}
+  - {fileID: 8300000, guid: 0f4082166fcb3984d9a1616280b39d36, type: 3}
+  - {fileID: 8300000, guid: c8ca012ececf31c46ad9e26144e72d95, type: 3}
+  - {fileID: 8300000, guid: b2c216e5634dda84dac2abc9ccdd3d58, type: 3}
+  - {fileID: 8300000, guid: e423ff26d7f315c4093c1ad054552756, type: 3}
   shootSounds:
   - {fileID: 8300000, guid: e74816f54ef3bc74499a635afe2033fb, type: 3}
   - {fileID: 8300000, guid: a98fc14c78afa51428eec5020ec30c32, type: 3}

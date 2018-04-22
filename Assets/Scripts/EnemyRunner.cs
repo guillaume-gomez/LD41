@@ -2,23 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyRunner : PhysicsObject {
-  public float maxSpeed = 7;
-  public float jumpTakeOffSpeed = 30;
+public class EnemyRunner : CharacterBase {
   public float velocityX = 0.3f;
-  public float damageDuration = 0.8f;
-  public AudioClip jumpSound;
-  public AudioClip[] ouchSounds;
   public bool jump = false;
-
-  private Animator animator;
-  private SpriteRenderer spriteRenderer;
   private float currentVelocityX = 0.3f;
 
-  void Awake () {
-    spriteRenderer = GetComponent<SpriteRenderer>();
-    animator = GetComponent<Animator>();
+  protected override void Awake() {
+    base.Awake();
+    jumpTakeOffSpeed = 30;
   }
+
 
   protected override void ComputeVelocity() {
     Vector2 move = Vector2.zero;
@@ -44,13 +37,12 @@ public class EnemyRunner : PhysicsObject {
     targetVelocity = move * maxSpeed;
   }
 
-  void Stop() {
+  public override void Stop() {
+    base.Stop();
     currentVelocityX = 0.0f;
-    SoundManager.instance.RandomizeSfx(ouchSounds);
-    Invoke("Cured", damageDuration);
   }
 
-  void Cured() {
+  public override void Cured() {
     currentVelocityX = velocityX;
   }
 

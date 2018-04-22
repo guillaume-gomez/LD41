@@ -2,26 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : PhysicsObject {
-
-  public float maxSpeed = 7;
-  public float jumpTakeOffSpeed = 7;
-  public AudioClip jumpSound;
+public class PlayerController : CharacterBase {
   public AudioClip[] shootSounds;
 
   public GameObject bulletPrefab;
   public Transform shotSpawner;
 
-  private Animator animator;
-  private SpriteRenderer spriteRenderer;
-
   private float fireRate = 0.5f;
   private float nextFire;
-
-  void Awake () {
-    spriteRenderer = GetComponent<SpriteRenderer>();
-    animator = GetComponent<Animator>();
-  }
 
   protected override void ComputeVelocity() {
     Vector2 move = Vector2.zero;
@@ -55,5 +43,14 @@ public class PlayerController : PhysicsObject {
       // create a bullet
       Instantiate(bulletPrefab, shotSpawner.position, shotSpawner.rotation);
     }
+  }
+
+  public override void Stop() {
+    SoundManager.instance.RandomizeSfx(ouchSounds);
+    Invoke("Cured", damageDuration);
+  }
+
+  public override void Cured() {
+    Debug.Log("Cured man !");
   }
 }
