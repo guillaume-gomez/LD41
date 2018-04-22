@@ -11,11 +11,12 @@ public class EnemyShoot : MonoBehaviour {
 
   public float detectionDistance = 50.0f;
   private float fireRate = 1.0f;
+  private float hurtOffset = 0.0f;
   private float nextFire;
 
 	// Update is called once per frame
 	void Update () {
-    if(Vector3.Distance(transform.position, targetToShoot.transform.position) <= detectionDistance && Time.time > nextFire) {
+    if(Vector3.Distance(transform.position, targetToShoot.transform.position) <= detectionDistance && Time.time > (nextFire + hurtOffset)) {
       nextFire = Time.time + fireRate;
       SoundManager.instance.RandomizeSfx(shootSounds);
       // to do set animation
@@ -24,8 +25,14 @@ public class EnemyShoot : MonoBehaviour {
     }
 	}
 
-  void Stop() {
-    Debug.Log("JE SUIS BLESSE");
+  public void Stop() {
+    hurtOffset = 5.0f;
+    Invoke("Cured", 2.0f);
   }
+
+  public void Cured() {
+    hurtOffset = 0.0f;
+  }
+
 
 }
