@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
     {
         enemys.Clear();
         doingSetup = true;
-        player = GameObject.Find("PlayerWithCamera");
+        player = GameObject.Find("Player");
         counterImage = GameObject.Find("CounterImage");
         counterImage.SetActive(true);
         player.SetActive(false);
