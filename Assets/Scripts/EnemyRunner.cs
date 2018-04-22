@@ -7,12 +7,6 @@ public class EnemyRunner : CharacterBase {
   public bool jump = false;
   private float currentVelocityX = 0.3f;
 
-  protected override void Awake() {
-    base.Awake();
-    jumpTakeOffSpeed = 30;
-  }
-
-
   protected override void ComputeVelocity() {
     Vector2 move = Vector2.zero;
     move.x = currentVelocityX;
