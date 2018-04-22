@@ -11,6 +11,7 @@ public class Bomb : MonoBehaviour {
 
   // Use this for initialization
   void Start () {
+    Destroy(this.gameObject, 5f);
     // anim = GetComponent <Animator>();
   }
 
@@ -30,4 +31,5 @@ public class Bomb : MonoBehaviour {
       }
     //}
   }
+
 }
