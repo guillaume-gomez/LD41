@@ -6,6 +6,8 @@ TagManager:
   tags:
   - BulletPlayer
   - EnemyRunner
+  - BulletEnemy
+  - EnemyShoot
   layers:
   - Default
   - TransparentFX
@@ -18,7 +20,7 @@ TagManager:
   - PlayerBullet
   - Player
   - EnemyRunner
-  - 
+  - EnemyBullet
   - 
   - 
   - 
