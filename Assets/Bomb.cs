@@ -13,7 +13,7 @@ public class Bomb : MonoBehaviour {
 
   // Use this for initialization
   void Start () {
-    Invoke("Explode", 5f);
+    Invoke("Explode", 2f);
     SoundManager.instance.PlaySingle(diveExplosionSounds);
     // anim = GetComponent <Animator>();
   }
@@ -22,7 +22,7 @@ public class Bomb : MonoBehaviour {
   void Update () {
     //if (anim.GetCurrentAnimatorStateInfo (0).IsName ("bombdead")) {
       //destroy all the objects in a radius unless they are tagged Player or hand
-      Collider2D[] colliders = Physics2D.OverlapCircleAll (transform.position, explodeRadius);
+      Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, explodeRadius);
       foreach(Collider2D col in colliders) {
         if (col.tag == "Player" || col.tag == "EnemyRunner")
         {
