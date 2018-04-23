@@ -26,7 +26,7 @@ public class Bullet : MonoBehaviour {
         Destroy(gameObject);
       }
     } else if(characterType == "Enemy") {
-      if(other.gameObject.tag == "Player") {
+      if(other.gameObject.tag == "Player" || other.gameObject.tag == "EnemyRunner") {
         other.gameObject.SendMessage("Stop");
         Destroy(gameObject);
       }
