@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour
             Invoke("HideLevelImage", levelStartDelay);
         }
         if(player) {
-            player.SetActive(false);
+            //player.SetActive(false);
         }
 
     }

@@ -7,12 +7,16 @@ public class EnemyShoot : MonoBehaviour {
 
   public GameObject bulletPrefab;
   public Transform shotSpawner;
-  public GameObject targetToShoot;
+  private GameObject targetToShoot;
 
   public float detectionDistance = 50.0f;
   private float fireRate = 1.0f;
   private float hurtOffset = 0.0f;
   private float nextFire;
+
+  void Start() {
+     targetToShoot = GameObject.FindWithTag("Player");
+  }
 
 	// Update is called once per frame
 	void Update () {
