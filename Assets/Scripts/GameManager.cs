@@ -73,6 +73,8 @@ public class GameManager : MonoBehaviour
         if(player) {
             //player.SetActive(false);
         }
+        InitEnemys();
+
 
     }
 
@@ -89,7 +91,6 @@ public class GameManager : MonoBehaviour
         myTimer = GameObject.Find("MyTimer").GetComponent<Timer>();
         myTimer.StartTimer();
 
-        InitEnemys();
         InitPlayer();
     }
 
