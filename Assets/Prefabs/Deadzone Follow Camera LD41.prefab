@@ -32,6 +32,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1892778856010198
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4418653416514672}
+  - component: {fileID: 114127554427399206}
+  m_Layer: 0
+  m_Name: Loader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4418653416514672
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1892778856010198}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.8697057, y: -4.5031533, z: 19.874847}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4704344820184954}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4704344820184954
 Transform:
   m_ObjectHideFlags: 1
@@ -39,9 +68,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1602719645527590}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.99, y: 3.43, z: -20}
+  m_LocalPosition: {x: 2, y: 4.72, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4418653416514672}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -109,6 +139,21 @@ MonoBehaviour:
   referenceOrthographicSize: 480
   referencePixelsPerUnit: 64
   overrides: []
+--- !u!114 &114127554427399206
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1892778856010198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 798ef49f14cf48942862dee6067df020, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 1027162037705038, guid: 573db10544709f3478f5650a38585966,
+    type: 2}
+  soundManager: {fileID: 1124997888927556, guid: 21036966c54abca479c98b681439f22a,
+    type: 2}
 --- !u!114 &114209912295372680
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -123,17 +168,17 @@ MonoBehaviour:
   target: {fileID: 0}
   deadzone:
     serializedVersion: 2
-    x: -1.4
-    y: -3
-    width: 2.6
-    height: 5.9
+    x: -6.1
+    y: -2.75
+    width: 0.74
+    height: 4.72
   smoothPos: {x: 0, y: 1, z: 0}
   limits:
   - serializedVersion: 2
-    x: -4.7
-    y: -0.53
-    width: 140
-    height: 8.06
+    x: -13.27
+    y: 0.66
+    width: 871.62
+    height: 10.97
 --- !u!124 &124415219117132414
 Behaviour:
   m_ObjectHideFlags: 1

@@ -66,10 +66,14 @@ public class GameManager : MonoBehaviour
         doingSetup = true;
         player = GameObject.Find("Player");
         counterImage = GameObject.Find("CounterImage");
-        counterImage.SetActive(true);
-        player.SetActive(false);
+        if(counterImage) {
+            counterImage.SetActive(true);
+            Invoke("HideLevelImage", levelStartDelay);
+        }
+        if(player) {
+            player.SetActive(false);
+        }
 
-        Invoke("HideLevelImage", levelStartDelay);
     }
 
     private void HideLevelImage()
