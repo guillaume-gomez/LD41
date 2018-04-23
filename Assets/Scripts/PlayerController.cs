@@ -57,6 +57,7 @@ public class PlayerController : CharacterBase {
         shotSpawner.position = new Vector3(shotSpawner.position.x, originalSpawner.y - 0.55f, 0);
       } else {
         shotSpawner.position = new Vector3(shotSpawner.position.x, originalSpawner.y, 0);
+        originalSpawner.y = shotSpawner.position.y;
       }
       // to do set animation
       // create a bullet
@@ -72,6 +73,12 @@ public class PlayerController : CharacterBase {
   public override void Stop() {
     SoundManager.instance.RandomizeSfx(ouchSounds);
     animator.SetBool("hurt", true);
+    coeff = 0.5f;
+    Invoke("Cured", damageDuration);
+  }
+
+  public override void Suffer() {
+    SoundManager.instance.RandomizeSfx(ouchSounds);
     coeff = 0.5f;
     Invoke("Cured", damageDuration);
   }

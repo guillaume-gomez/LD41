@@ -21,6 +21,9 @@ public class CharacterBase : PhysicsObject {
     base.ComputeVelocity();
   }
 
+  public virtual void Suffer() {
+  }
+
   public virtual void Stop() {
   }
 

@@ -37,6 +37,12 @@ public class EnemyRunner : CharacterBase {
     Invoke("Cured", damageDuration);
   }
 
+  public override void Suffer() {
+    base.Suffer();
+    currentVelocityX = velocityX / 2;
+    Invoke("Cured", damageDuration);
+  }
+
   public override void Cured() {
     currentVelocityX = velocityX;
   }
