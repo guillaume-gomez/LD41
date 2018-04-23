@@ -9,10 +9,16 @@ public class PlayerController : CharacterBase {
   public Transform shotSpawner;
   public float coeff = 1.0f;
 
-  private float fireRate = 0.5f;
+  private float fireRate = 0.8f;
   private float nextFire;
+  private Vector3 originalSpawner;
 
   public float Coeff { get; set; }
+
+  protected virtual void Awake () {
+    base.Awake();
+    originalSpawner = shotSpawner.position;
+  }
 
   protected override void ComputeVelocity() {
     Vector2 move = Vector2.zero;
@@ -44,6 +50,11 @@ public class PlayerController : CharacterBase {
       shooted = true;
       nextFire = Time.time + fireRate;
       SoundManager.instance.RandomizeSfx(shootSounds);
+      if(targetVelocity.x > 0.01f) {
+        shotSpawner.position = new Vector3(shotSpawner.position.x, originalSpawner.y - 0.55f, 0);
+      } else {
+        shotSpawner.position = new Vector3(shotSpawner.position.x, originalSpawner.y, 0);
+      }
       // to do set animation
       // create a bullet
       Instantiate(bulletPrefab, shotSpawner.position, shotSpawner.rotation);
