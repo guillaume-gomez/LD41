@@ -53,5 +53,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefabs:
   - {fileID: 1034858542945764, guid: 9c9cc31ed97300b40980215f0d232074, type: 2}
+  InitEnemysPos: {x: 5, y: 5, z: 0}
   player: {fileID: 1393669372037428, guid: 13526ad550b5c1145b14859c792e13b2, type: 2}
   levelStartDelay: 3

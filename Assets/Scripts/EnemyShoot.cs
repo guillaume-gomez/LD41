@@ -20,13 +20,15 @@ public class EnemyShoot : MonoBehaviour {
   }
 
 	// Update is called once per frame
-	void Update () {
-    if(Vector3.Distance(transform.position, targetToShoot.transform.position) <= detectionDistance && Time.time > (nextFire + hurtOffset)) {
-      nextFire = Time.time + fireRate;
-      SoundManager.instance.RandomizeSfx(shootSounds);
-      // to do set animation
-      // create a bullet
-      Instantiate(bulletPrefab, shotSpawner.position, shotSpawner.rotation);
+  void Update () {
+    if(!GameManager.instance.doingSetup) {
+      if(Vector3.Distance(transform.position, targetToShoot.transform.position) <= detectionDistance && Time.time > (nextFire + hurtOffset)) {
+        nextFire = Time.time + fireRate;
+        SoundManager.instance.RandomizeSfx(shootSounds);
+        // to do set animation
+        // create a bullet
+        Instantiate(bulletPrefab, shotSpawner.position, shotSpawner.rotation);
+      }
     }
 	}
 
