@@ -9,10 +9,16 @@ public class PlayerController : CharacterBase {
   public Transform shotSpawner;
   public float coeff = 1.0f;
 
-  private float fireRate = 0.5f;
+  private float fireRate = 0.8f;
   private float nextFire;
+  private Vector3 originalSpawner;
 
   public float Coeff { get; set; }
+
+  protected virtual void Awake () {
+    base.Awake();
+    originalSpawner = shotSpawner.position;
+  }
 
   protected override void ComputeVelocity() {
     Vector2 move = Vector2.zero;
@@ -27,7 +33,7 @@ public class PlayerController : CharacterBase {
       }
     }
 
-    bool flipSprite = spriteRenderer.flipX ? (move.x > 0.01f) : (move.x < 0.01f);
+    bool flipSprite = spriteRenderer.flipX ? (move.x > 0.00f) : (move.x < 0.00f);
     if (flipSprite) {
       spriteRenderer.flipX = !spriteRenderer.flipX;
     }
@@ -39,22 +45,32 @@ public class PlayerController : CharacterBase {
 
   public override void Update() {
     base.Update();
-    if( Input.GetButtonDown("Fire1") && Time.time > nextFire) {
+    bool shooted = false;
+    if( Input.GetButtonDown("Fire1") && Time.time > nextFire && !spriteRenderer.flipX) { // tweak with flipsprite
+      shooted = true;
       nextFire = Time.time + fireRate;
       SoundManager.instance.RandomizeSfx(shootSounds);
+      if(targetVelocity.x > 0.01f) {
+        shotSpawner.position = new Vector3(shotSpawner.position.x, originalSpawner.y - 0.55f, 0);
+      } else {
+        shotSpawner.position = new Vector3(shotSpawner.position.x, originalSpawner.y, 0);
+      }
       // to do set animation
       // create a bullet
       Instantiate(bulletPrefab, shotSpawner.position, shotSpawner.rotation);
     }
+    animator.SetBool("shoot", shooted);
   }
 
   public override void Stop() {
     SoundManager.instance.RandomizeSfx(ouchSounds);
+    animator.SetBool("hurt", true);
     coeff = 0.5f;
     Invoke("Cured", damageDuration);
   }
 
   public override void Cured() {
+    animator.SetBool("hurt", false);
     coeff = 1.0f;
   }
 }

@@ -60,6 +60,9 @@ TagManager:
   - name: Layer2
     uniqueID: 2053369151
     locked: 0
+  - name: Bullet
+    uniqueID: 1867451035
+    locked: 0
   - name: Characters
     uniqueID: 2919090541
     locked: 0
