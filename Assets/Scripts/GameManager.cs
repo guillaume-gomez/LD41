@@ -70,12 +70,7 @@ public class GameManager : MonoBehaviour
             counterImage.SetActive(true);
             Invoke("HideLevelImage", levelStartDelay);
         }
-        if(player) {
-            //player.SetActive(false);
-        }
         InitEnemys();
-
-
     }
 
     private void HideLevelImage()
