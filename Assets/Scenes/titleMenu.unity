@@ -343,13 +343,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 3
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: LD 41
+  m_Text: 'LD 41 : I''m Not a hero'
 --- !u!222 &948199706
 CanvasRenderer:
   m_ObjectHideFlags: 0

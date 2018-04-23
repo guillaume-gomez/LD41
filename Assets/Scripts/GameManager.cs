@@ -15,6 +15,9 @@ public class GameManager : MonoBehaviour
     public GameObject player;
 
     public bool doingSetup;
+
+    private Text gameOverText;
+    private Text counterText;
     private GameObject counterImage;
     public float levelStartDelay = 3f;
     private List<EnemyRunner> enemys = new List <EnemyRunner> ();
@@ -30,11 +33,14 @@ public class GameManager : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
         // uncomment in standalone
-        InitGame();
+        //InitGame();
     }
 
-    static private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
+    static private void OnSceneLoaded(Scene scene, LoadSceneMode arg1)
     {
+        if(scene.buildIndex != (int)ScreensEnum.GameScreen) {
+            return;
+        }
         instance.level++;
         instance.InitGame();
     }
@@ -93,13 +99,28 @@ public class GameManager : MonoBehaviour
     {
     }
 
+    void ReloadLevel() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
+    }
+
     public void Win() {
         myTimer.StopTimer();
         player.SetActive(false);
         for(int i = 0; i < enemys.Count; ++i) {
             enemys[i].gameObject.SetActive(false);
         }
-        Debug.Log("You Won");
+        counterImage.SetActive(true);
+        counterText = GameObject.Find("CounterText").GetComponent<Text>();
+        counterText.enabled = false;
+        gameOverText = GameObject.Find("Text").GetComponent<Text>();
+        string message = "";
+        if(GetHeroPosition() == 1) {
+            message = "Congrats, you won !";
+        } else {
+            message = "Sorry, one of your friend took your place to paradise";
+        }
+        gameOverText.text = message;
+        Invoke("ReloadLevel", 3f);
     }
 
     public int GetHeroPosition() {
