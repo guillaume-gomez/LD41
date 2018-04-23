@@ -83,18 +83,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.28, y: -0.08}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 1.24}
+    oldSize: {x: 6, y: 4.5}
     newSize: {x: 0.64, y: 1.24}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.64, y: 1.24}
+  m_Size: {x: 1.22, y: 2.54}
   m_EdgeRadius: 0
 --- !u!114 &114592722141254930
 MonoBehaviour:
@@ -113,8 +113,6 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1489063158695986, guid: 1b2d387cf971e0d438945f5ddb141337,
     type: 2}
   shotSpawner: {fileID: 4552889056065650}
-  targetToShoot: {fileID: 1393669372037428, guid: 13526ad550b5c1145b14859c792e13b2,
-    type: 2}
   detectionDistance: 20
 --- !u!212 &212990823765555856
 SpriteRenderer:
@@ -150,9 +148,9 @@ SpriteRenderer:
   m_SortingLayerID: -1375876755
   m_SortingLayer: 7
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 729ac94ce85f85e44a5a51ae55d0955c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3eb84c95e4f528943a9de0e7546f2942, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.64, y: 1.24}
