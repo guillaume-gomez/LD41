@@ -21,12 +21,14 @@ public class PlayerController : CharacterBase {
   }
 
   protected override void ComputeVelocity() {
+    bool startJump = false;
     Vector2 move = Vector2.zero;
     move.x = Input.GetAxis("Horizontal");
 
     if(Input.GetButtonDown("Jump") && grounded) {
       SoundManager.instance.PlaySingle(jumpSound);
       velocity.y = jumpTakeOffSpeed;
+      startJump = true;
     } else if (Input.GetButtonUp("Jump")) {
       if(velocity.y > 0) {
         velocity.y = velocity.y * 0.5f;
@@ -38,6 +40,7 @@ public class PlayerController : CharacterBase {
       spriteRenderer.flipX = !spriteRenderer.flipX;
     }
 
+    animator.SetBool("startJump", startJump);
     animator.SetBool("grounded", grounded);
     animator.SetFloat ("velocityX", Mathf.Abs (velocity.x) / maxSpeed);
     targetVelocity = move * maxSpeed * coeff;
@@ -57,9 +60,13 @@ public class PlayerController : CharacterBase {
       }
       // to do set animation
       // create a bullet
-      Instantiate(bulletPrefab, shotSpawner.position, shotSpawner.rotation);
+      Invoke("Shoot", 0.3f);
     }
     animator.SetBool("shoot", shooted);
+  }
+
+  private void Shoot() {
+    Instantiate(bulletPrefab, shotSpawner.position, shotSpawner.rotation);
   }
 
   public override void Stop() {
