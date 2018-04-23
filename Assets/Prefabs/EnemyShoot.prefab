@@ -51,7 +51,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1495167487280828}
   m_LocalRotation: {x: -0, y: -0, z: 0.999992, w: -0.0040056263}
-  m_LocalPosition: {x: -0.2800007, y: -0.049999952, z: 20.113852}
+  m_LocalPosition: {x: -1.15, y: -0.3, z: 20.113852}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 4778869003771416}
@@ -64,7 +64,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1319320388045662}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30.8, y: 3.81, z: 0}
+  m_LocalPosition: {x: 31.15, y: 3.81, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4552889056065650}
@@ -83,18 +83,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.24, y: -0.08}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 1.24}
+    oldSize: {x: 6, y: 4.5}
     newSize: {x: 0.64, y: 1.24}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.64, y: 1.24}
+  m_Size: {x: 1.22, y: 2.54}
   m_EdgeRadius: 0
 --- !u!114 &114592722141254930
 MonoBehaviour:
@@ -110,11 +110,15 @@ MonoBehaviour:
   shootSounds:
   - {fileID: 8300000, guid: cb255a65926dbe84c87720e38a5c9922, type: 3}
   - {fileID: 8300000, guid: a37121cbb7b95344b975fe535b91d440, type: 3}
+  ouchSounds:
+  - {fileID: 8300000, guid: e617c09c662ca1d42917f837f0530ad8, type: 3}
+  - {fileID: 8300000, guid: 0f4082166fcb3984d9a1616280b39d36, type: 3}
+  - {fileID: 8300000, guid: c8ca012ececf31c46ad9e26144e72d95, type: 3}
+  - {fileID: 8300000, guid: b2c216e5634dda84dac2abc9ccdd3d58, type: 3}
+  - {fileID: 8300000, guid: e423ff26d7f315c4093c1ad054552756, type: 3}
   bulletPrefab: {fileID: 1489063158695986, guid: 1b2d387cf971e0d438945f5ddb141337,
     type: 2}
   shotSpawner: {fileID: 4552889056065650}
-  targetToShoot: {fileID: 1393669372037428, guid: 13526ad550b5c1145b14859c792e13b2,
-    type: 2}
   detectionDistance: 20
 --- !u!212 &212990823765555856
 SpriteRenderer:
@@ -150,9 +154,9 @@ SpriteRenderer:
   m_SortingLayerID: -1375876755
   m_SortingLayer: 7
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 729ac94ce85f85e44a5a51ae55d0955c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3eb84c95e4f528943a9de0e7546f2942, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.64, y: 1.24}

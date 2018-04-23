@@ -1,9 +1,81 @@
 fileFormatVersion: 2
-guid: 3edd1bfc2316ca74ba7d8a19f1036ad4
-timeCreated: 1524498623
+guid: 3eb84c95e4f528943a9de0e7546f2942
+timeCreated: 1524498569
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: ShootRunner_ALL_0
+    21300002: ShootRunner_ALL_1
+    21300004: ShootRunner_ALL_2
+    21300006: ShootRunner_ALL_3
+    21300008: ShootRunner_ALL_4
+    21300010: ShootRunner_ALL_5
+    21300012: ShootRunner_ALL_6
+    21300014: ShootRunner_ALL_7
+    21300016: ShootRunner_ALL_8
+    21300018: ShootRunner_ALL_9
+    21300020: ShootRunner_ALL_10
+    21300022: ShootRunner_ALL_11
+    21300024: ShootRunner_ALL_12
+    21300026: ShootRunner_ALL_13
+    21300028: ShootRunner_ALL_14
+    21300030: ShootRunner_ALL_15
+    21300032: ShootRunner_ALL_16
+    21300034: ShootRunner_ALL_17
+    21300036: ShootRunner_ALL_18
+    21300038: ShootRunner_ALL_19
+    21300040: ShootRunner_ALL_20
+    21300042: ShootRunner_ALL_21
+    21300044: ShootRunner_ALL_22
+    21300046: ShootRunner_ALL_23
+    21300048: ShootRunner_ALL_24
+    21300050: ShootRunner_ALL_25
+    21300052: ShootRunner_ALL_26
+    21300054: ShootRunner_ALL_27
+    21300056: ShootRunner_ALL_28
+    21300058: ShootRunner_ALL_29
+    21300060: ShootRunner_ALL_30
+    21300062: ShootRunner_ALL_31
+    21300064: ShootRunner_ALL_32
+    21300066: ShootRunner_ALL_33
+    21300068: ShootRunner_ALL_34
+    21300070: ShootRunner_ALL_35
+    21300072: ShootRunner_ALL_36
+    21300074: ShootRunner_ALL_37
+    21300076: ShootRunner_ALL_38
+    21300078: ShootRunner_ALL_39
+    21300080: ShootRunner_ALL_40
+    21300082: ShootRunner_ALL_41
+    21300084: ShootRunner_ALL_42
+    21300086: ShootRunner_ALL_43
+    21300088: ShootRunner_ALL_44
+    21300090: ShootRunner_ALL_45
+    21300092: ShootRunner_ALL_46
+    21300094: ShootRunner_ALL_47
+    21300096: ShootRunner_ALL_48
+    21300098: ShootRunner_ALL_49
+    21300100: ShootRunner_ALL_50
+    21300102: ShootRunner_ALL_51
+    21300104: ShootRunner_ALL_52
+    21300106: ShootRunner_ALL_53
+    21300108: ShootRunner_ALL_54
+    21300110: ShootRunner_ALL_55
+    21300112: ShootRunner_ALL_56
+    21300114: ShootRunner_ALL_57
+    21300116: ShootRunner_ALL_58
+    21300118: ShootRunner_ALL_59
+    21300120: ShootRunner_ALL_60
+    21300122: ShootRunner_ALL_61
+    21300124: ShootRunner_ALL_62
+    21300126: ShootRunner_ALL_63
+    21300128: ShootRunner_ALL_64
+    21300130: ShootRunner_ALL_65
+    21300132: ShootRunner_ALL_66
+    21300134: ShootRunner_ALL_67
+    21300136: ShootRunner_ALL_68
+    21300138: ShootRunner_ALL_69
+    21300140: ShootRunner_ALL_70
+    21300142: ShootRunner_ALL_71
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -40,7 +112,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -67,9 +139,1037 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: ShootRunner_ALL_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2250
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_1
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 2250
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_2
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 2250
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_3
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 2250
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_4
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 2250
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_5
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 2250
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_6
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 2250
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_7
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 2250
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_8
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 2250
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_9
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 2250
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_10
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 2250
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_11
+      rect:
+        serializedVersion: 2
+        x: 6600
+        y: 2250
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1800
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_13
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1800
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_14
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1800
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_15
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1800
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_16
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1800
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_17
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1800
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_18
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1800
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_19
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 1800
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_20
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 1800
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_21
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 1800
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_22
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 1800
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_23
+      rect:
+        serializedVersion: 2
+        x: 6600
+        y: 1800
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1350
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_25
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1350
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_26
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1350
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_27
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1350
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_28
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1350
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_29
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1350
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_30
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1350
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_31
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 1350
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_32
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 1350
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_33
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 1350
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_34
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 1350
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_35
+      rect:
+        serializedVersion: 2
+        x: 6600
+        y: 1350
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 900
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_37
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 900
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_38
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 900
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_39
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 900
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_40
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 900
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_41
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 900
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_42
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 900
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_43
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 900
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_44
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 900
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_45
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 900
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_46
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 900
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_47
+      rect:
+        serializedVersion: 2
+        x: 6600
+        y: 900
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 450
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_49
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 450
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_50
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 450
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_51
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 450
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_52
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 450
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_53
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 450
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_54
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 450
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_55
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 450
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_56
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 450
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_57
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 450
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_58
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 450
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_59
+      rect:
+        serializedVersion: 2
+        x: 6600
+        y: 450
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_61
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_62
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_63
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 0
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_64
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 0
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_65
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 0
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_66
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 0
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_67
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 0
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_68
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 0
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_69
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 0
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_70
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 0
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShootRunner_ALL_71
+      rect:
+        serializedVersion: 2
+        x: 6600
+        y: 0
+        width: 600
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 

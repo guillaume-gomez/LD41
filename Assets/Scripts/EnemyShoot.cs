@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyShoot : MonoBehaviour {
   public AudioClip[] shootSounds;
+  public AudioClip[] ouchSounds;
 
   public GameObject bulletPrefab;
   public Transform shotSpawner;
@@ -30,6 +31,7 @@ public class EnemyShoot : MonoBehaviour {
 	}
 
   public void Stop() {
+    SoundManager.instance.RandomizeSfx(ouchSounds);
     hurtOffset = 5.0f;
     Invoke("Cured", 2.0f);
   }
