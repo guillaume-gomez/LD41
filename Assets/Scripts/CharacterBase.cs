@@ -22,8 +22,6 @@ public class CharacterBase : PhysicsObject {
   }
 
   public virtual void Stop() {
-    SoundManager.instance.RandomizeSfx(ouchSounds);
-    Invoke("Cured", damageDuration);
   }
 
   public virtual void Cured() {

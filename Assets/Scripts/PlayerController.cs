@@ -7,9 +7,12 @@ public class PlayerController : CharacterBase {
 
   public GameObject bulletPrefab;
   public Transform shotSpawner;
+  public float coeff = 1.0f;
 
   private float fireRate = 0.5f;
   private float nextFire;
+
+  public float Coeff { get; set; }
 
   protected override void ComputeVelocity() {
     Vector2 move = Vector2.zero;
@@ -31,7 +34,7 @@ public class PlayerController : CharacterBase {
 
     animator.SetBool("grounded", grounded);
     animator.SetFloat ("velocityX", Mathf.Abs (velocity.x) / maxSpeed);
-    targetVelocity = move * maxSpeed;
+    targetVelocity = move * maxSpeed * coeff;
   }
 
   public override void Update() {
@@ -47,10 +50,11 @@ public class PlayerController : CharacterBase {
 
   public override void Stop() {
     SoundManager.instance.RandomizeSfx(ouchSounds);
+    coeff = 0.5f;
     Invoke("Cured", damageDuration);
   }
 
   public override void Cured() {
-//    Debug.Log("Cured man !");
+    coeff = 1.0f;
   }
 }
