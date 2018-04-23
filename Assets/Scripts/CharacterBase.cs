@@ -17,6 +17,14 @@ public class CharacterBase : PhysicsObject {
     animator = GetComponent<Animator>();
   }
 
+  public virtual void Update ()
+  {
+    if(!GameManager.instance.doingSetup) {
+      targetVelocity = Vector2.zero;
+      ComputeVelocity ();
+    }
+  }
+
   protected override void ComputeVelocity() {
     base.ComputeVelocity();
   }

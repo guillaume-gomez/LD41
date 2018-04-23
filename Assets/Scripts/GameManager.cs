@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     public Vector3 InitEnemysPos;
     public GameObject player;
 
-    private bool doingSetup;
+    public bool doingSetup;
     private GameObject counterImage;
     public float levelStartDelay = 3f;
     private List<EnemyRunner> enemys = new List <EnemyRunner> ();
@@ -56,7 +56,6 @@ public class GameManager : MonoBehaviour
     }
 
     private void InitPlayer() {
-        player.SetActive(true);
         //Debug.Log("InitPlayer");
         //Instantiate(player, new Vector3(0, 1, 0), Quaternion.identity);
     }
