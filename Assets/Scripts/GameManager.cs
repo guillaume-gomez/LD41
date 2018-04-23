@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
     private void InitEnemys() {
         for(int i = 0; i < nbEnemys; ++i) {
             float offset = 0.6f;
-            Vector3 initPos = new Vector3(InitEnemysPos.x, InitEnemysPos.y + (i * offset), 0);
+            Vector3 initPos = new Vector3(InitEnemysPos.x + (i * offset), InitEnemysPos.y, 0);
             EnemyRunner enemy = Instantiate(enemyPrefabs[0], initPos, Quaternion.identity).GetComponent<EnemyRunner>();
             enemy.VelocityX = Random.Range(0f, 1f);
             enemys.Add(enemy);
