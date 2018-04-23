@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     private int nbEnemys = 5;
     private Timer myTimer;
     public GameObject[] enemyPrefabs;
+    public Vector3 InitEnemysPos;
     public GameObject player;
 
     private bool doingSetup;
@@ -47,7 +48,7 @@ public class GameManager : MonoBehaviour
     private void InitEnemys() {
         for(int i = 0; i < nbEnemys; ++i) {
             float offset = 0.6f;
-            Vector3 initPos = new Vector3(0, 2 + (i * offset), 0);
+            Vector3 initPos = new Vector3(InitEnemysPos.x, InitEnemysPos.y + (i * offset), 0);
             EnemyRunner enemy = Instantiate(enemyPrefabs[0], initPos, Quaternion.identity).GetComponent<EnemyRunner>();
             enemy.VelocityX = Random.Range(0f, 1f);
             enemys.Add(enemy);
