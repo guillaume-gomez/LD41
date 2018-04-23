@@ -100,6 +100,10 @@ public class GameManager : MonoBehaviour
 
     public void Win() {
         myTimer.StopTimer();
+        player.SetActive(false);
+        for(int i = 0; i < enemys.Count; ++i) {
+            enemys[i].gameObject.SetActive(false);
+        }
         Debug.Log("You Won");
     }
 
