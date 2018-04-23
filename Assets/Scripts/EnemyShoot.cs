@@ -11,9 +11,14 @@ public class EnemyShoot : MonoBehaviour {
   private GameObject targetToShoot;
 
   public float detectionDistance = 50.0f;
+  protected Animator animator;
   private float fireRate = 1.0f;
   private float hurtOffset = 0.0f;
   private float nextFire;
+
+  protected void Awake() {
+     animator = GetComponent<Animator>();
+  }
 
   void Start() {
      targetToShoot = GameObject.FindWithTag("Player");
@@ -23,11 +28,14 @@ public class EnemyShoot : MonoBehaviour {
   void Update () {
     if(!GameManager.instance.doingSetup) {
       if(Vector3.Distance(transform.position, targetToShoot.transform.position) <= detectionDistance && Time.time > (nextFire + hurtOffset)) {
+        animator.SetBool("shoot", true);
         nextFire = Time.time + fireRate;
         SoundManager.instance.RandomizeSfx(shootSounds);
         // to do set animation
         // create a bullet
         Instantiate(bulletPrefab, shotSpawner.position, shotSpawner.rotation);
+      } else {
+        animator.SetBool("shoot", false);
       }
     }
 	}
