@@ -34,6 +34,7 @@ public class EnemyRunner : CharacterBase {
   public override void Stop() {
     base.Stop();
     currentVelocityX = 0.0f;
+    Invoke("Cured", damageDuration);
   }
 
   public override void Cured() {
