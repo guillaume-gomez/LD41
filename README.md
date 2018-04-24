@@ -1,7 +1,9 @@
+![title](GitHubResources/front.png)
+
 This game is combining classic Run and Gun gameplay with a Racing Game, the goal is not to get the higher score
 but to get to the finish line before your opponents !
 
-![firstGif.gif](///raw/88f/2/z/11f6b.gif)
+![firstGif.gif](GitHubResources/firstGif.gif)
 
 # Game Detail
 
