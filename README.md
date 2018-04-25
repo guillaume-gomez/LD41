@@ -41,3 +41,7 @@ Shoot    ->     Left Click or Ctrl
 - Florian Coulouma: Narration
 - Maxime Lambert: Concept / Game Design
 - Guillaume Gomez: Programming
+
+## Link to LDjam page
+
+![ldjam](https://ldjam.com/events/ludum-dare/41/im-not-a-hero)
