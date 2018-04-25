@@ -44,4 +44,4 @@ Shoot    ->     Left Click or Ctrl
 
 ## Link to LDjam page
 
-![ldjam](https://ldjam.com/events/ludum-dare/41/im-not-a-hero)
+[ldjam](https://ldjam.com/events/ludum-dare/41/im-not-a-hero)
