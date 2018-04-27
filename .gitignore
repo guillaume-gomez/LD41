@@ -27,6 +27,12 @@ ExportedObj/
 *.svd
 *.pdb
 
+Assets/
+Library/
+ProjectSettings/
+UnityPackageManager/
+LD41
+
 # Unity3D generated meta files
 *.pidb.meta
 
