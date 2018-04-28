@@ -5,6 +5,8 @@ but to get to the finish line before your opponents !
 
 ![firstGif.gif](GitHubResources/firstGif.gif)
 
+[web version](https://guillaume-gomez.github.io/LD41/build/)
+
 # Game Detail
 
 The game is an horizontal scroller.
@@ -44,4 +46,4 @@ Shoot    ->     Left Click or Ctrl
 
 ## Link to LDjam page
 
-[ldjam](https://ldjam.com/events/ludum-dare/41/im-not-a-hero)
+[ludum dare page](https://ldjam.com/events/ludum-dare/41/im-not-a-hero)
