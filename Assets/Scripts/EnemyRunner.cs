@@ -5,7 +5,9 @@ using UnityEngine;
 public class EnemyRunner : CharacterBase {
   public float velocityX = 0.3f;
   public bool jump = false;
+  public float detectionDistance = 40.0f;
   private float currentVelocityX = 0.3f;
+
 
   protected override void ComputeVelocity() {
     Vector2 move = Vector2.zero;
@@ -16,9 +18,24 @@ public class EnemyRunner : CharacterBase {
       spriteRenderer.flipX = !spriteRenderer.flipX;
     }
 
-    if(jump && grounded) {
+    bool needJump = false;
+    GameObject[] bullets = GameObject.FindGameObjectsWithTag("BulletEnemy");
+    foreach(GameObject bullet in bullets) {
+      if (
+        bullet.transform.position.x > transform.position.x
+        && Vector3.Distance(transform.position, bullet.transform.position) <= detectionDistance
+      ) {
+        needJump = true;
+        break;
+      }
+    }
+    if((jump || needJump) && grounded) {
       SoundManager.instance.PlaySingle(jumpSound);
-      velocity.y = jumpTakeOffSpeed;
+      if(needJump) {
+          velocity.y = jumpTakeOffSpeed * 0.75f;
+        } else {
+          velocity.y = jumpTakeOffSpeed;
+        }
     } else if (jump) {
       if(velocity.y > 0) {
         velocity.y = velocity.y * 0.5f;
@@ -55,6 +72,12 @@ public class EnemyRunner : CharacterBase {
     set {
       velocityX = value;
       currentVelocityX = value;
+    }
+  }
+
+  public float DetectionDistance {
+    set {
+      detectionDistance = value;
     }
   }
 }
