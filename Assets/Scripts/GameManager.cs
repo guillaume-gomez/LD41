@@ -57,6 +57,7 @@ public class GameManager : MonoBehaviour
             Vector3 initPos = new Vector3(InitEnemysPos.x + (i * offset), InitEnemysPos.y, 0);
             EnemyRunner enemy = Instantiate(enemyPrefabs[0], initPos, Quaternion.identity).GetComponent<EnemyRunner>();
             enemy.VelocityX = Random.Range(0f, 1f);
+            enemy.DetectionDistance = Random.Range(30.0f, 50.0f);
             enemys.Add(enemy);
         }
     }
