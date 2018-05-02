@@ -8,6 +8,7 @@ TagManager:
   - EnemyRunner
   - BulletEnemy
   - EnemyShoot
+  - ForbiddenHUD
   layers:
   - Default
   - TransparentFX
