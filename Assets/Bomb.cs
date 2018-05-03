@@ -9,7 +9,7 @@ public class Bomb : MonoBehaviour {
   //a holder for our Animator
   //Animator anim;
   //a public float for the explosion radius public
-  float explodeRadius = 1f;
+  float explodeRadius = 3f;
 
   // Use this for initialization
   void Start () {
@@ -19,7 +19,7 @@ public class Bomb : MonoBehaviour {
   }
 
   // Update is called once per frame
-  void Update () {
+  private void OnTriggerEnter2D(Collider2D other) {
     //if (anim.GetCurrentAnimatorStateInfo (0).IsName ("bombdead")) {
       //destroy all the objects in a radius unless they are tagged Player or hand
       Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, explodeRadius);
@@ -30,11 +30,12 @@ public class Bomb : MonoBehaviour {
           CharacterBase characterBase = gameobjCharacterBase.GetComponent<CharacterBase>();
           characterBase.Stop();
           Explode();
+        } else if(col.tag == "Plateform") {
+          Explode();
         }
       }
     //}
   }
-
   private void Explode() {
     SoundManager.instance.RandomizeSfx(explosionSounds);
     Destroy(this.gameObject);
