@@ -9,6 +9,7 @@ TagManager:
   - BulletEnemy
   - EnemyShoot
   - ForbiddenHUD
+  - Plateform
   layers:
   - Default
   - TransparentFX
