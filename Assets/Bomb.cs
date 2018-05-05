@@ -6,8 +6,6 @@ public class Bomb : MonoBehaviour {
 
   public AudioClip[] explosionSounds;
   public AudioClip diveExplosionSounds;
-  //a holder for our Animator
-  //Animator anim;
   //a public float for the explosion radius public
   float explodeRadius = 3f;
 
