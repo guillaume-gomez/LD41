@@ -62,6 +62,7 @@ public class PlayerController : CharacterBase {
   }
 
   public override void Stop() {
+    Debug.Log("Stop");
     SoundManager.instance.RandomizeSfx(ouchSounds);
     animator.SetBool("hurt", true);
     coeff = 0.5f;
