@@ -7,6 +7,7 @@ public class EnemyShoot : MonoBehaviour {
   public AudioClip[] ouchSounds;
 
   public GameObject bulletPrefab;
+  public GameObject forbiddenSprite;
   public Transform shotSpawner;
   private GameObject targetToShoot;
 
@@ -18,6 +19,7 @@ public class EnemyShoot : MonoBehaviour {
 
   protected void Awake() {
      animator = GetComponent<Animator>();
+     forbiddenSprite.SetActive(false);
   }
 
   void Start() {
@@ -42,12 +44,14 @@ public class EnemyShoot : MonoBehaviour {
 
   public void Stop() {
     SoundManager.instance.RandomizeSfx(ouchSounds);
+    forbiddenSprite.SetActive(true);
     hurtOffset = 5.0f;
     Invoke("Cured", 2.0f);
   }
 
   public void Cured() {
     hurtOffset = 0.0f;
+    forbiddenSprite.SetActive(false);
   }
 
 
