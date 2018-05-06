@@ -6,6 +6,7 @@ public class Bomb : MonoBehaviour {
 
   public AudioClip[] explosionSounds;
   public AudioClip diveExplosionSounds;
+  public GameObject explosionBombPrefab;
   //a public float for the explosion radius public
   float explodeRadius = 3f;
 
@@ -28,15 +29,20 @@ public class Bomb : MonoBehaviour {
           CharacterBase characterBase = gameobjCharacterBase.GetComponent<CharacterBase>();
           characterBase.Stop();
           Explode();
-        } else if(col.tag == "Plateform") {
-          Explode();
         }
+      }
+
+      if(other.gameObject.tag == "Plateform") {
+        Explode();
       }
     //}
   }
   private void Explode() {
     SoundManager.instance.RandomizeSfx(explosionSounds);
     Destroy(this.gameObject);
+    Vector3 explosionPosition = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
+    GameObject explosiongm = Instantiate(explosionBombPrefab, explosionPosition, transform.rotation);
+    Destroy(explosiongm, 1.5f);
   }
 
 }

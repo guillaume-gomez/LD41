@@ -19,7 +19,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4665967917775742}
-  - component: {fileID: 95341457326025726}
   - component: {fileID: 212246849459898110}
   - component: {fileID: 50355314386527940}
   - component: {fileID: 61181559502013700}
@@ -89,23 +88,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.48, y: 4.96}
   m_EdgeRadius: 0
---- !u!95 &95341457326025726
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1167911029613510}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 03289fd8476125343b256caa54650a60, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114155229344922026
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -122,6 +104,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e9f855bc12a60ef459d4a312291a58f2, type: 3}
   - {fileID: 8300000, guid: 291c3e07fdfaf8b45bff86e11ac51d30, type: 3}
   diveExplosionSounds: {fileID: 8300000, guid: 89a22315e573845479d27c671a2ef7a4, type: 3}
+  explosionBombPrefab: {fileID: 1056292995867460, guid: 4a681222b0dd8af4ca2e43a129b1638d,
+    type: 2}
 --- !u!212 &212246849459898110
 SpriteRenderer:
   m_ObjectHideFlags: 1
