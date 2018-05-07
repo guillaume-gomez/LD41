@@ -120,6 +120,7 @@ public class GameManager : MonoBehaviour
         } else {
             message = "Sorry, one of your friend took your place to paradise";
         }
+        message += "\n Timer :" + myTimer.getTimerString();
         gameOverText.text = message;
         Invoke("ReloadLevel", 3f);
     }
