@@ -34,4 +34,8 @@ public class Timer : MonoBehaviour {
     startTimer = Time.time;
     started = true;
   }
+
+  public string getTimerString() {
+    return timerText.text;
+  }
 }
