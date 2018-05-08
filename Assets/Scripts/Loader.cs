@@ -5,6 +5,7 @@ public class Loader : MonoBehaviour
 {
     public GameObject gameManager;
     public GameObject soundManager;
+    public GameObject scoreManager;
 
     void Awake ()
     {
@@ -16,6 +17,11 @@ public class Loader : MonoBehaviour
         if (SoundManager.instance == null)
         {
             Instantiate(soundManager);
+        }
+
+        if(ScoreManager.instance == null)
+        {
+            Instantiate(scoreManager);
         }
     }
 }

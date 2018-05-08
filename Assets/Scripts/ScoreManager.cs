@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour {
 
-  Dictionary <string, Dictionary<string, int> > playerScores;
+  Dictionary <string, Dictionary<string, string> > playerTimers;
   public static ScoreManager instance = null;
 
   void Awake() {
@@ -21,48 +21,47 @@ public class ScoreManager : MonoBehaviour {
 
   void Start() {
     int nbEnemys = GameManager.instance.NbEnemys;
-    Debug.Log(nbEnemys);
     for(int i = 0; i < nbEnemys; i++) {
-      instance.SetScore("Enemy " + i, "kills", 9001 + i);
+      instance.SetTimer("Enemy " + i, "kills", "9001");
     }
-    instance.SetScore("Murphy", "jsdfjdkf", 3989);
+    instance.SetTimer("Murphy", "jsdfjdkf", "3989");
   }
 
   private void Init () {
-    if(playerScores != null) {
+    if(playerTimers != null) {
       return;
     }
-    playerScores = new Dictionary<string, Dictionary<string, int>>();
+    playerTimers = new Dictionary<string, Dictionary<string, string>>();
   }
 
-  public int GetScore(string username, string scoreType) {
+  public string GetTimer(string username, string position) {
     Init();
 
-    if(playerScores.ContainsKey(username) == false) {
-      return 0;
+    if(playerTimers.ContainsKey(username) == false) {
+      return "";
     }
 
-    if(playerScores[username].ContainsKey(scoreType) == false) {
-      return 0;
+    if(playerTimers[username].ContainsKey(position) == false) {
+      return "";
     }
-    return playerScores[username][scoreType];
+    return playerTimers[username][position];
   }
 
-  public void SetScore(string username, string scoreType, int value) {
+  public void SetTimer(string username, string position, string value) {
     Init();
 
-    if(playerScores.ContainsKey(username) == false) {
-      playerScores[username] = new Dictionary<string, int>();
+    if(playerTimers.ContainsKey(username) == false) {
+      playerTimers[username] = new Dictionary<string, string>();
     }
   }
 
-  public void changeScore(string username, string scoreType, int amount) {
+  public void changeTimer(string username, string position, string amount) {
     Init();
-    int currScore = GetScore(username, scoreType);
-    SetScore(username, scoreType, currScore + amount);
+    string currTimer = GetTimer(username, position);
+    SetTimer(username, position, currTimer + amount);
   }
 
   public string[] GetPlayerNames() {
-    return playerScores.Keys.ToArray();
+    return playerTimers.Keys.ToArray();
   }
 }
