@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     private Text gameOverText;
     private Text counterText;
     private GameObject counterImage;
+    private GameObject scorePanel;
     public float levelStartDelay = 3f;
     private List<EnemyRunner> enemys = new List <EnemyRunner> ();
 
@@ -33,7 +34,7 @@ public class GameManager : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
         // uncomment in standalone
-        //InitGame();
+        InitGame();
     }
 
     static private void OnSceneLoaded(Scene scene, LoadSceneMode arg1)
@@ -56,7 +57,7 @@ public class GameManager : MonoBehaviour
             float offset = 0.6f;
             Vector3 initPos = new Vector3(InitEnemysPos.x + (i * offset), InitEnemysPos.y, 0);
             EnemyRunner enemy = Instantiate(enemyPrefabs[0], initPos, Quaternion.identity).GetComponent<EnemyRunner>();
-            enemy.VelocityX = Random.Range(0f, 1f);
+            enemy.VelocityX = Random.Range(0.5f, 1.2f);
             enemy.DetectionDistance = Random.Range(30.0f, 50.0f);
             enemys.Add(enemy);
         }
@@ -73,9 +74,13 @@ public class GameManager : MonoBehaviour
         doingSetup = true;
         player = GameObject.Find("Player");
         counterImage = GameObject.Find("CounterImage");
+        scorePanel = GameObject.Find("ScorePanel");
         if(counterImage) {
             counterImage.SetActive(true);
             Invoke("HideLevelImage", levelStartDelay);
+        }
+        if(scorePanel) {
+            scorePanel.SetActive(false);
         }
         InitEnemys();
     }
@@ -110,17 +115,15 @@ public class GameManager : MonoBehaviour
         for(int i = 0; i < enemys.Count; ++i) {
             enemys[i].gameObject.SetActive(false);
         }
-        counterImage.SetActive(true);
-        counterText = GameObject.Find("CounterText").GetComponent<Text>();
-        counterText.enabled = false;
-        gameOverText = GameObject.Find("Text").GetComponent<Text>();
+        scorePanel.SetActive(true);
+        gameOverText = GameObject.Find("ResultMessage").GetComponent<Text>();
         string message = "";
         if(GetHeroPosition() == 1) {
-            message = "Congrats, you won !";
+            message = "C o n g r a t s,   y o u   w o n  !";
         } else {
-            message = "Sorry, one of your friend took your place to paradise";
+            message = "S o r r y,   o n e   o f   y o u r   f r i e n d   t o o k   y o u r   p l a c e   t o   p a r a d i s e.";
         }
-        message += "\n Timer :" + myTimer.getTimerString();
+        //message += "\n Timer :" + myTimer.getTimerString();
         gameOverText.text = message;
         Invoke("ReloadLevel", 3f);
     }
@@ -140,6 +143,6 @@ public class GameManager : MonoBehaviour
             if(instance == null) {
                 instance = this;
             }
-            return instance.nbEnemys + 1;
+            return instance.nbEnemys;
         } }
 }
