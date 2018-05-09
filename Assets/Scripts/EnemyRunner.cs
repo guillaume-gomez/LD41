@@ -7,6 +7,7 @@ public class EnemyRunner : CharacterBase {
   public bool jump = false;
   public float detectionDistance = 40.0f;
   private float currentVelocityX = 0.3f;
+  private string name = "";
 
 
   protected override void ComputeVelocity() {
@@ -78,6 +79,15 @@ public class EnemyRunner : CharacterBase {
   public float DetectionDistance {
     set {
       detectionDistance = value;
+    }
+  }
+
+  public string Name {
+    set {
+      name = value;
+    }
+    get {
+      return name;
     }
   }
 }
