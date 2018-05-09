@@ -62,16 +62,16 @@ public class PlayerController : CharacterBase {
   }
 
   public override void Stop() {
-    Debug.Log("Stop");
     SoundManager.instance.RandomizeSfx(ouchSounds);
     animator.SetBool("hurt", true);
-    coeff = 0.5f;
+    coeff = 0.4f;
     Invoke("Cured", damageDuration);
   }
 
   public override void Suffer() {
     SoundManager.instance.RandomizeSfx(ouchSounds);
-    coeff = 0.5f;
+    animator.SetBool("hurt", true);
+    coeff = 0.7f;
     Invoke("Cured", damageDuration);
   }
 
