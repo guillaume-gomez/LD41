@@ -9,30 +9,30 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1027162037705038}
+  m_RootGameObject: {fileID: 1160135528975134}
   m_IsPrefabParent: 1
---- !u!1 &1027162037705038
+--- !u!1 &1160135528975134
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4260385336631620}
-  - component: {fileID: 114614306236347094}
+  - component: {fileID: 4056049744110672}
+  - component: {fileID: 114015158564828892}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: Loader
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4260385336631620
+--- !u!4 &4056049744110672
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1027162037705038}
+  m_GameObject: {fileID: 1160135528975134}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.8697056, y: 0.21684657, z: -0.12515222}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -40,19 +40,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114614306236347094
+--- !u!114 &114015158564828892
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1027162037705038}
+  m_GameObject: {fileID: 1160135528975134}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa1aef19954eac046a28252392dd93b6, type: 3}
+  m_Script: {fileID: 11500000, guid: 798ef49f14cf48942862dee6067df020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefabs:
-  - {fileID: 1034858542945764, guid: 9c9cc31ed97300b40980215f0d232074, type: 2}
-  InitEnemysPos: {x: 5, y: 5, z: 0}
-  player: {fileID: 1393669372037428, guid: 13526ad550b5c1145b14859c792e13b2, type: 2}
-  levelStartDelay: 3
+  gameManager: {fileID: 1027162037705038, guid: 573db10544709f3478f5650a38585966,
+    type: 2}
+  soundManager: {fileID: 1124997888927556, guid: 21036966c54abca479c98b681439f22a,
+    type: 2}
+  scoreManager: {fileID: 1450976644667824, guid: 1e17f6fa56bb23847bde973c2a7d6ed3,
+    type: 2}
