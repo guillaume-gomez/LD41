@@ -112,7 +112,7 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
     }
 
-    public void Win() {
+    private void EndGame() {
         myTimer.StopTimer();
         player.SetActive(false);
         for(int i = 0; i < enemys.Count; ++i) {
@@ -120,15 +120,21 @@ public class GameManager : MonoBehaviour
         }
         scorePanel.SetActive(true);
         gameOverText = GameObject.Find("ResultMessage").GetComponent<Text>();
-        string message = "";
-        if(GetHeroPosition() == 1) {
-            message = "C o n g r a t s,   y o u   w o n  !";
-        } else {
-            message = "S o r r y,   o n e   o f   y o u r   f r i e n d   t o o k   y o u r   p l a c e   t o   p a r a d i s e.";
-        }
-        //message += "\n Timer :" + myTimer.getTimerString();
+        Invoke("ReloadLevel", 5f);
+    }
+
+    public void Win() {
+        EndGame();
+        ScoreManager.instance.CreateScore(true, myTimer.getTimerString(), GetHeroPosition());
+        string message = "C o n g r a t s,   y o u   w o n  !";
         gameOverText.text = message;
-        Invoke("ReloadLevel", 3f);
+    }
+
+    public void Lose() {
+        EndGame();
+        ScoreManager.instance.CreateScore(false, myTimer.getTimerString(), GetHeroPosition());
+        string message = "S o r r y,   o n e   o f   y o u r   f r i e n d   t o o k   y o u r   p l a c e   t o   p a r a d i s e.";
+        gameOverText.text = message;
     }
 
     public int GetHeroPosition() {
@@ -147,5 +153,6 @@ public class GameManager : MonoBehaviour
                 instance = this;
             }
             return instance.nbEnemys;
-        } }
+        }
+    }
 }
