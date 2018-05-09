@@ -31,6 +31,8 @@ public class PlayerScoreList : MonoBehaviour {
       GameObject go = (GameObject)Instantiate(playerScoreEntryPrefab);
       go.transform.SetParent(this.transform);
       go.transform.Find("Username").GetComponent<Text>().text = name;
+      go.transform.Find("Position").GetComponent<Text>().text = scoremanager.GetPosition(name).ToString();
+      go.transform.Find("Timer").GetComponent<Text>().text = scoremanager.GetTimer(name);
     }
   }
 }

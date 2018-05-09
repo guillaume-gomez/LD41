@@ -14,6 +14,6 @@ public class PositionText : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-    positionText.text = "Position : " + GameManager.instance.GetHeroPosition().ToString() + "/ " + GameManager.instance.NbEnemys.ToString();
+    positionText.text = "Position : " + GameManager.instance.GetHeroPosition().ToString() + "/ " + (GameManager.instance.NbEnemys + 1).ToString();
   }
 }
