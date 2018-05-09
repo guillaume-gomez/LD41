@@ -53,12 +53,15 @@ public class GameManager : MonoBehaviour
     }
 
     private void InitEnemys() {
+        string[] names = { "Billy", "Willy", "John", "Mike", "Chris", "Paul", "George" };
         for(int i = 0; i < nbEnemys; ++i) {
             float offset = 0.6f;
             Vector3 initPos = new Vector3(InitEnemysPos.x + (i * offset), InitEnemysPos.y, 0);
             EnemyRunner enemy = Instantiate(enemyPrefabs[0], initPos, Quaternion.identity).GetComponent<EnemyRunner>();
-            enemy.VelocityX = Random.Range(0.5f, 1.2f);
+            enemy.VelocityX = Random.Range(0.5f, 1.1f);
             enemy.DetectionDistance = Random.Range(30.0f, 50.0f);
+            int nameIndex = Random.Range(0, names.Length);
+            enemy.Name = names[i];
             enemys.Add(enemy);
         }
     }
