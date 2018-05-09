@@ -8,5 +8,8 @@ public class FinishZone : MonoBehaviour {
     if(other.gameObject.tag == "Player") {
       GameManager.instance.Win();
     }
+    if(other.gameObject.tag == "EnemyRunner") {
+      GameManager.instance.Lose();
+    }
   }
 }
