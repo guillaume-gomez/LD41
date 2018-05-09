@@ -27,7 +27,7 @@ public class Bomb : MonoBehaviour {
         {
           GameObject gameobjCharacterBase = col.GetComponent<Collider2D>().gameObject;
           CharacterBase characterBase = gameobjCharacterBase.GetComponent<CharacterBase>();
-          characterBase.Stop();
+          characterBase.Bombed();
           Explode();
         }
       }
