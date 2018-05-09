@@ -38,4 +38,7 @@ public class CharacterBase : PhysicsObject {
   public virtual void Cured() {
   }
 
+  public virtual void Bombed() {
+  }
+
 }

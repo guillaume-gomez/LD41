@@ -75,8 +75,17 @@ public class PlayerController : CharacterBase {
     Invoke("Cured", damageDuration);
   }
 
+  public override void Bombed() {
+    SoundManager.instance.RandomizeSfx(ouchSounds);
+    animator.SetBool("hurt", true);
+    coeff = 0.1f;
+    Debug.Log("Bombed Me");
+    Invoke("Cured", 2.0f * damageDuration);
+  }
+
   public override void Cured() {
     animator.SetBool("hurt", false);
     coeff = 1.0f;
   }
+
 }
