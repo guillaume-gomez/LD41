@@ -5,7 +5,7 @@ but to get to the finish line before your opponents !
 
 ![firstGif.gif](GitHubResources/firstGif.gif)
 
-[web version](https://guillaume-gomez.github.io/LD41/build/)
+[play online](https://guillaume-gomez.github.io/LD41/build/)
 
 # Game Detail
 
