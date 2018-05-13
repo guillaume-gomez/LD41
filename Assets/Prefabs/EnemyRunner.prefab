@@ -110,7 +110,7 @@ MonoBehaviour:
   minGroundNormalY: 0.65
   gravityModifier: 1
   maxSpeed: 7
-  jumpTakeOffSpeed: 10
+  jumpTakeOffSpeed: 8
   damageDuration: 0.8
   jumpSound: {fileID: 8300000, guid: bfc63574f94ab3746930fbbc7eb2347d, type: 3}
   ouchSounds:
@@ -121,6 +121,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e423ff26d7f315c4093c1ad054552756, type: 3}
   velocityX: 0.5
   jump: 0
+  detectionDistance: 40
 --- !u!212 &212041990654933272
 SpriteRenderer:
   m_ObjectHideFlags: 1
