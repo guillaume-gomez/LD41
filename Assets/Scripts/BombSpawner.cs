@@ -6,8 +6,8 @@ public class BombSpawner : MonoBehaviour {
   // a public object array for which objects to spawn
   public GameObject[] obj;
   //min and max times for another spawn
-  public float spawnMin = 3f;
-  public float spawnMax = 2f;
+  public float spawnMin = 2f;
+  public float spawnMax = 3f;
 
   // Use this for initialization
   void Start () {
