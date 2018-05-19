@@ -9,9 +9,11 @@ public class BombSpawner : MonoBehaviour {
   public float spawnMin = 2f;
   public float spawnMax = 3f;
 
+  public bool randomizeCall = true;
+
   // Use this for initialization
   void Start () {
-    Spawn();
+    //Spawn();
   }
 
   void Spawn() {
@@ -20,7 +22,15 @@ public class BombSpawner : MonoBehaviour {
     if (rand > 700) {
       Instantiate (obj [Random.Range (0, obj.GetLength (0))], transform.position, Quaternion.identity);
     }
-    //invoke spawn at random time interval between min and max
-    Invoke ("Spawn", Random.Range (spawnMin, spawnMax));
+    if(randomizeCall) {
+      //invoke spawn at random time interval between min and max
+      Invoke ("Spawn", Random.Range (spawnMin, spawnMax));
+    }
+  }
+
+  private void OnTriggerEnter2D(Collider2D other) {
+    if(other.gameObject.tag == "Player" || other.gameObject.tag == "EnemyRunner") {
+      Spawn();
+    }
   }
 }
