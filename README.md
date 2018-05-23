@@ -47,4 +47,4 @@ Shoot    ->     Left Click or Ctrl
 
 [ludum dare page](https://ldjam.com/events/ludum-dare/41/im-not-a-hero)
 
-[result](GitHubResources/results.png)
+![result](GitHubResources/results.png)
