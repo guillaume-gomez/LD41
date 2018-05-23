@@ -24,7 +24,6 @@ We ended up a bit overwhelmed by all the features we wanted to cram into the gam
 shooting, and mostly character animation (some sweet fuel for future nightmare).
 The experience was tense and fun at the same time and we leveled up for the next Ludum Dare
 
-Sending Love to all LD participant :heart:
 
 # Controls
 
