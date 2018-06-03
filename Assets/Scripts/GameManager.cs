@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
         // uncomment in standalone
-        InitGame();
+        //InitGame();
     }
 
     static private void OnSceneLoaded(Scene scene, LoadSceneMode arg1)

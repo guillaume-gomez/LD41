@@ -14,11 +14,6 @@ public class EnemyRunner : CharacterBase {
     Vector2 move = Vector2.zero;
     move.x = currentVelocityX;
 
-    bool flipSprite = spriteRenderer.flipX ? (move.x > 0.01f) : (move.x < 0.01f);
-    if (flipSprite) {
-      spriteRenderer.flipX = !spriteRenderer.flipX;
-    }
-
     bool needJump = false;
     GameObject[] bullets = GameObject.FindGameObjectsWithTag("BulletEnemy");
     foreach(GameObject bullet in bullets) {
