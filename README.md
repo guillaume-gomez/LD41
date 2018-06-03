@@ -5,7 +5,9 @@ but to get to the finish line before your opponents !
 
 ![firstGif.gif](GitHubResources/firstGif.gif)
 
-[play it online](https://guillaume-gomez.github.io/LD41/build/)
+[play it online](https://guillaume-gomez.github.io/LD41/build/JamVersion/)
+
+[Windows version](https://drive.google.com/drive/folders/1uCgqmrBZJ86BNkhIuVH7jqXFz75OgMgB)
 
 # Game Detail
 
@@ -24,7 +26,6 @@ We ended up a bit overwhelmed by all the features we wanted to cram into the gam
 shooting, and mostly character animation (some sweet fuel for future nightmare).
 The experience was tense and fun at the same time and we leveled up for the next Ludum Dare
 
-Sending Love to all LD participant :heart:
 
 # Controls
 
@@ -47,3 +48,5 @@ Shoot    ->     Left Click or Ctrl
 ## Link to LDjam page
 
 [ludum dare page](https://ldjam.com/events/ludum-dare/41/im-not-a-hero)
+
+![result](GitHubResources/results.png)
