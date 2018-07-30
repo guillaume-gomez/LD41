@@ -1,0 +1,12 @@
+{
+"companyName": "DefaultCompany",
+"productName": "LD41 - I'm Not a hero",
+"dataUrl": "ncs.data.unityweb",
+"wasmCodeUrl": "ncs.wasm.code.unityweb",
+"wasmFrameworkUrl": "ncs.wasm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}
