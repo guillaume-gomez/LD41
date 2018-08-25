@@ -28,12 +28,12 @@ The experience was tense and fun at the same time and we leveled up for the next
 
 
 # Controls
+| Action | Key |
+|---------|------|
+| Move | w/a/s/d |
+| Jump | Space |
+| Shoot | Left Click or Ctrl |
 
-Move     ->     w/a/s/d
-
-Jump     ->     Space
-
-Shoot    ->     Left Click or Ctrl
 
 
 # Team
