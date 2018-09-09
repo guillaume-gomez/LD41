@@ -48,6 +48,7 @@ The experience was tense and fun at the same time and we leveled up for the next
 ## Link to LDjam page
 
 [ludum dare page](https://ldjam.com/events/ludum-dare/41/im-not-a-hero)
-2022 jam
+
+2022 jam entries
 
 ![result](GitHubResources/results.png)
